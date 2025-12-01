@@ -3,24 +3,17 @@ import { CodeSnippet } from "@/components/CodeSnipppet";
 
 export default function ApiSection() {
   return (
-    <div className=" bg-[#E8E9F8] dark:bg-[#2D3142] transition-colors duration-300 rounded-4xl">
+    <div className=" bg-[#E8E9F8] dark:bg-[#2a2a33] transition-colors duration-300 overflow-x-hidden rounded-3xl">
       {/* Main content */}
       <div className="container mx-auto px-6 py-12 md:py-16">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-start">
           {/* Left column - Content */}
           <div className="space-y-6 px-6 md:space-y-8">
-            <h1
-              className="font-medium text-foreground w-[331px] max-w-md"
-              style={{
-                fontSize: "var(--font-size-display-md)",
-                lineHeight: "var(--line-height-display-md)",
-                letterSpacing: "var(--letter-spacing-display-md)",
-              }}
-            >
+            <h1 className="font-medium text-foreground w-[331px] max-w-md text-[38px] leading-[42px] tracking-tight lg:w-[612px] lg:text-[40px] lg:leading-[48px]">
               Get ready to scale with our payment APIs
             </h1>
 
-            <div className="space-y-5 md:space-y-6 text-secondary text-xl leading-7 tracking-normal mb-12 w-[331px]">
+            <div className="space-y-5 md:space-y-6 text-secondary text-xl leading-7 tracking-normal mb-12 w-[331px] lg:w-[532px]">
               {/* Feature 1 */}
               <div className="flex items-start gap-3 md:gap-4">
                 <div className="shrink-0 w-6 h-6 flex items-center justify-center mt-0.5">
@@ -31,7 +24,7 @@ export default function ApiSection() {
 
               {/* Feature 2 */}
               <div className="flex items-start gap-3 md:gap-4">
-                <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center mt-0.5">
+                <div className="shrink-0 w-6 h-6 flex items-center justify-center mt-0.5">
                   <Braces className="w-6 h-6 text-[#4CAF50] dark:text-[#4CAF50]" />
                 </div>
                 <p className="">Flexible APIs for any payment use case</p>
@@ -54,7 +47,7 @@ export default function ApiSection() {
           </div>
 
           {/* Right column - Code snippet */}
-          <div className="mt-8 lg:mt-0">
+          <div className="lg:mt-0">
             <CodeSnippet />
           </div>
         </div>

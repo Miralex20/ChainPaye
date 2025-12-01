@@ -247,7 +247,7 @@ export const NavbarLogo = () => {
         className=" hidden dark:block "
       />
 
-      <span className="uppercase font-extrabold text-black dark:text-white">
+      <span className="uppercase  font-extrabold text-black dark:text-white">
         ChainPaye
       </span>
     </a>

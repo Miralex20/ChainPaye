@@ -78,7 +78,7 @@ const MultiStepCards = () => {
         transition={{ duration: 0.8 }}
         className="text-center items-center mt-4 p-6 text-2xl flex flex-col justify-center"
       >
-        <h1 className="mb-4 text-[38px] leading-[42px] font-medium text-(--text-tertiary) dark:text-(--text-secondary) tracking-tight w-[398px]">
+        <h1 className="mb-4 text-[38px] leading-[42px] font-medium text-[#5a5f73] dark:text-[#bdbfc7] tracking-tight w-[398px] lg:w-[569px] lg:text-[40px] lg:leading-[48px]">
           Get Started with Chainpaye in{" "}
           <span className="text-black dark:text-white">Three Simple Steps</span>
         </h1>

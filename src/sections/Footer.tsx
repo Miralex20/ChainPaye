@@ -9,28 +9,28 @@ export default function Footer() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeInOut", delayChildren: 0.2 }}
       viewport={{ once: false, amount: 0.2 }}
-      className={`relative bg-linear-to-t from-[#ccd9f8] lg:mt-20 to-[#efeff1] dark:from-[#0b1837] dark:to-[#202024] overflow-hidden animate-gradient text-foreground`}
+      className={`relative bg-linear-to-t from-[#ccd9f8] lg:py-20 to-[#efeff1] dark:from-[#0b1837] dark:to-[#202024] overflow-hidden animate-gradient text-foreground`}
     >
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 lg:ml-64">
         {/* Top Section */}
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 lg:h-[230px] lg:w-[1279px] ">
           {/* Left - Heading */}
-          <div className="w-[382px] h-[144px]">
-            <h2 className=" font-medium text-[40px] leading-(--line-height-display-md)">
+          <div className="w-[382px] h-[144px] lg:w-[578px] lg:h-[96px] ">
+            <h2 className=" font-medium text-[40px] leading-[42px] lg:leading-[48px] lg:tracking-tight">
               Unlock Borderless Payments With Chainpaye
             </h2>
           </div>
 
           {/* Right - Description and CTA */}
-          <div className="flex flex-col justify-center w-[382px] h-[202px]">
-            <p className="mb-6 font-medium text-18px leading-[26px] text-secondary tracking-normal">
+          <div className="flex flex-col justify-center w-[382px] h-[202px] pb-20">
+            <p className="mb-6 font-medium text-18px leading-[26px] text-secondary tracking-normal lg:w-[591px]">
               Add seamless global and on-chain payments to your business with
               one lightweight integration — we handle compliance, settlement,
               liquidity, and infrastructure so you can focus on growth.
             </p>
             <div>
-              <button className="bg-primary text-white px-6 py-3 rounded-md inline-flex items-center gap-2 transition-colors">
+              <button className="bg-primary text-foreground px-6 py-3 rounded-md inline-flex items-center gap-2 transition-colors">
                 Get in touch with us
                 <ArrowRight size={18} />
               </button>
@@ -57,7 +57,7 @@ export default function Footer() {
           className={` md:flex md:flex-wrap md:items-center md:justify-between md:gap-6 md:pb-12 md:border-b `}
         >
           {/* Navigation Links - Vertical on mobile, horizontal on desktop */}
-          <nav className="flex flex-col md:flex-row md:flex-wrap md:items-center gap-6 md:gap-8 mb-8 pb-8 md:mb-0">
+          <nav className="flex flex-col md:flex-row md:flex-wrap md:items-center gap-6 md:gap-8 mb-8 pb-8 md:mb-0 lg:w-[448px] lg:text-[16px] lg:leading-6">
             <a href="#" className={` transition-colors`}>
               Solutions
             </a>
@@ -71,7 +71,7 @@ export default function Footer() {
 
           {/* Social Icons - Desktop only */}
           <motion.div className="hidden md:flex items-center gap-4">
-            <a href="#" className={` transition-colors`}>
+            <a href="#">
               <svg
                 width="24"
                 height="24"
@@ -81,7 +81,7 @@ export default function Footer() {
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
             </a>
-            <a href="#" className={`transition-colors`}>
+            <a href="#">
               <svg
                 width="24"
                 height="24"
@@ -104,9 +104,9 @@ export default function Footer() {
       </div>
 
       {/* Background Large Text */}
-      <div className="absolute bottom-25 flex items-center justify-center overflow-hidden pointer-events-none">
+      <div className="absolute bottom-25 lg:top-25 lg:left-6 flex items-center justify-center overflow-hidden pointer-events-none">
         <div
-          className={`text-[6rem] text-[#bccfff] dark:text-[#16245b] md:text-[16rem] font-extrabold lg:text-[20rem] whitespace-nowrap select-none opacity-50`}
+          className={`text-[6rem] text-[#bccfff] dark:text-[#16245b] md:text-[16rem] font-extrabold lg:text-[20rem]  select-none opacity-30`}
         >
           CHAINPAYE
         </div>

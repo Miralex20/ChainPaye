@@ -72,11 +72,11 @@ export function CardCarousel() {
 
   return (
     <div className="w-full flex flex-col items-center justify-center py-16">
-      <div className="w-[417px] h-[20px] mb-16 gap-4 flex flex-col items-center justify-center">
-        <h1 className="font-medium tracking-tight text-[27.83px] text-[#111528] leading-[30.78px] dark:text-white">
+      <div className="w-[417px] h-[20px] mb-16 gap-4 flex flex-col items-center justify-center lg:w-[569px] lg:h-[26px]">
+        <h1 className="font-medium tracking-tight text-[27.83px] text-[#111528] leading-[30.78px] dark:text-white lg:text-[40px] lg:leading-[48px]">
           Real world application{" "}
         </h1>
-        <p className="text-[13.18px] font-medium leading-[19.04px] tracking-normal text-secondary dark:text-(--text-tertiary)">
+        <p className="text-[13.18px] font-medium leading-[19.04px] text-secondary dark:text-(--text-tertiary) lg:text-[18px] lg:leading-[26px]">
           Discover how people and businesses use Chainpaye
         </p>
       </div>
@@ -90,12 +90,12 @@ export function CardCarousel() {
           {cards.map((card, index) => (
             <motion.div
               key={index}
-              className="flex-shrink-0 w-[85%]"
+              className="shrink-0 w-[85%] "
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
             >
-              <div className="bg-background dark:bg-[#242433] rounded-3xl shadow-xl p-6 h-full">
+              <div className="bg-card rounded-3xl shadow-xl p-6 h-full">
                 <h2 className="text-gray-900 font-bold dark:text-white mb-4">
                   {card.title}
                 </h2>
@@ -117,13 +117,13 @@ export function CardCarousel() {
           {/* Left Wing Card */}
           <motion.div
             key={`left-${currentIndex}`}
-            className="absolute left-0 w-80 pointer-events-none"
+            className="absolute left-0 w-80 pointer-events-none lg:w-[422px]"
             initial={{ opacity: 0, x: -100, rotateY: 45, scale: 0.8 }}
             animate={{ opacity: 0.5, x: 0, rotateY: 45, scale: 0.85 }}
             transition={{ duration: 0.5 }}
             style={{ transformStyle: "preserve-3d" }}
           >
-            <div className="bg-background dark:bg-[#242433] rounded-3xl shadow-xl p-8">
+            <div className="bg-card rounded-3xl shadow-xl p-8">
               <h2 className="text-gray-900 font-bold dark:text-white mb-4">
                 {cards[getPrevIndex()].title}
               </h2>
@@ -134,7 +134,7 @@ export function CardCarousel() {
           </motion.div>
 
           {/* Center Active Card */}
-          <div className="w-full max-w-xl">
+          <div className="w-full max-w-xl lg:w-[422px]">
             <AnimatePresence initial={false} custom={direction} mode="wait">
               <motion.div
                 key={currentIndex}
@@ -159,13 +159,13 @@ export function CardCarousel() {
                     paginate(-1);
                   }
                 }}
-                className="w-full"
+                className="w-full font-medium"
               >
-                <div className="bg-background dark:bg-[#242433] rounded-3xl shadow-2xl p-10 cursor-grab active:cursor-grabbing">
-                  <h2 className="text-gray-900 font-bold dark:text-white mb-6">
+                <div className="bg-card rounded-3xl shadow-2xl p-10 cursor-grab active:cursor-grabbing">
+                  <h2 className="text-gray-900 font-bold dark:text-white mb-6 lg:text-[18px] lg:leading-[26px]">
                     {cards[currentIndex].title}
                   </h2>
-                  <p className="text-gray-600 dark:text-white leading-relaxed whitespace-pre-line">
+                  <p className="text-secondary leading-relaxed whitespace-pre-line lg:text-[18px] lg:leading-[30px]">
                     {cards[currentIndex].content}
                   </p>
                 </div>
@@ -176,13 +176,13 @@ export function CardCarousel() {
           {/* Right Wing Card */}
           <motion.div
             key={`right-${currentIndex}`}
-            className="absolute right-0 w-80 pointer-events-none"
+            className="absolute right-0 w-80 pointer-events-none lg:w-[422px]"
             initial={{ opacity: 0, x: 100, rotateY: -45, scale: 0.8 }}
             animate={{ opacity: 0.5, x: 0, rotateY: -45, scale: 0.85 }}
             transition={{ duration: 0.5 }}
             style={{ transformStyle: "preserve-3d" }}
           >
-            <div className="bg-background dark:bg-[#242433] rounded-3xl shadow-xl p-8">
+            <div className="bg-card rounded-3xl shadow-xl p-8">
               <h2 className="text-gray-900 mb-4">
                 {cards[getNextIndex()].title}
               </h2>

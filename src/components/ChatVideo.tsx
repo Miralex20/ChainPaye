@@ -86,10 +86,10 @@ export default function ChatVideo() {
   }, [currentIndex]);
 
   return (
-    <div className=" flex items-center justify-center relative bg-[url('/images/phoneBg.png')] bg-no-repeat w-7xl pointer-events-none h-[377px] overflow-visible mt-2 rounded-t-3xl">
+    <div className=" flex items-center justify-center relative w-7xl pointer-events-none h-[377px] overflow-visible mt-2 rounded-t-3xl lg:h-[654px]">
       {/* Phone Frame */}
-      <div className="relative z-10">
-        <div className="relative w-[280px] h-[425px] lg:h-[708px] lg:w-[443px] object-fit overflow-hidden lg:mt-64 mb-12">
+      <div className="z-10">
+        <div className="relative w-[280px] h-[425px] lg:h-[708px] lg:w-[443px] object-cover overflow-hidden mb-12 lg:inset-1">
           <Image
             src="/images/phoneFrame.png"
             alt="Phone frame"
@@ -136,9 +136,9 @@ export default function ChatVideo() {
             </div>
 
             {/* Chat Messages Area */}
-            <div className="flex-1 overflow-hidden lg:px-6 px-2 py-2 bg-[url('/images/whatsappScreen.png')] flex flex-col justify-end text-xs">
+            <div className="flex-1 overflow-hidden lg:px-6 px-2 bg-[url('/images/whatsappScreen.png')] flex flex-col justify-end lg:justify-start font-bold text-xs">
               <motion.div
-                className="flex flex-col justify-end"
+                className="flex flex-col justify-end lg:justify-start text-bold"
                 layout
                 transition={{ duration: 0.4, ease: [0.4, 0.0, 0.2, 1] }}
               >

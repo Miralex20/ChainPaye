@@ -112,7 +112,7 @@ function Navigation() {
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
             <ThemeToggle />
-            <NavbarButton className="bg-primary text-primary-foreground flex gap-4 items-center justify-center">
+            <NavbarButton className="bg-primary text-primary-foreground flex gap-4 items-center justify-center mr-6">
               <Image
                 src="icons/whatsapp.svg"
                 alt="whatsapp icon"
@@ -130,7 +130,7 @@ function Navigation() {
           <MobileNavHeader>
             <NavbarLogo />
 
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 mr-8">
               <ThemeToggle />
               <MobileNavToggle
                 isOpen={isMobileMenuOpen}

@@ -1,10 +1,10 @@
 export function CodeSnippet() {
   return (
-    <div className="bg-white/40 dark:bg-transparent rounded-3xl p-8 border border-white/20 dark:border-white/10">
-      <div className="bg-[#F5F5F7] dark:bg-[#1E1E1E] rounded-2xl p-6 font-mono text-sm overflow-x-auto">
-        <div className="space-y-1">
+    <div className="bg-white/40 dark:bg-transparent  rounded-3xl p-8 border border-white/20 dark:border-white/10">
+      <div className="bg-background rounded-2xl p-4 ] font-mono text-sm overflow-x-auto">
+        <div className="space-y-1 ">
           {/* Line 1 */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 bg-background">
             <span className="text-gray-400 dark:text-gray-600 select-none w-6 text-right">
               1
             </span>
