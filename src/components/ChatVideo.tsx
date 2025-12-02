@@ -86,10 +86,10 @@ export default function ChatVideo() {
   }, [currentIndex]);
 
   return (
-    <div className=" flex items-center justify-center relative w-7xl pointer-events-none h-[377px] overflow-visible mt-2 lg:mb-24 rounded-t-3xl lg:h-[654px]">
+    <div className=" flex items-center justify-center relative w-7xl pointer-events-none h-[377px] overflow-visible mt-2 lg:mb-24  lg:h-[654px]">
       {/* Phone Frame */}
       <div className="z-10">
-        <div className="relative w-[280px] h-[425px] lg:h-[708px] lg:w-[443px] object-cover overflow-hidden mb-12 lg:inset-1">
+        <div className="relative w-[280px] h-[425px] lg:h-[708px] lg:w-[443px] object-cover overflow-hidden mb-15 lg:inset-1">
           <Image
             src="/images/phoneFrame.png"
             alt="Phone frame"

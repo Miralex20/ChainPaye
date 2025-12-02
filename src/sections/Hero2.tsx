@@ -7,7 +7,7 @@ const Hero2 = () => {
     <div>
       {/* PHONE - ALWAYS VISIBLE */}
       {/* RIGHT BUBBLE - HIDDEN ON MOBILE */}
-      <div className="relative z-20 scale-90 sm:scale-95 md:scale-100 lg:scale-105 lg:mb-50">
+      <div className="relative z-20 scale-90 sm:scale-95 md:scale-100 lg:scale-105 lg:mb-50 bg-[url('/images/phoneBg.png')] bg-cover bg-center bg-no-repeat">
         <motion.div
           className="absolute right-10
                     lg:top-30"

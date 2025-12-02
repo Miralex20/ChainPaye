@@ -20,7 +20,7 @@ const Cards = () => {
           className="w-full"
         >
           <Image
-            className="object-cover w-full lg:h-[527px] lg:w-[443px] lg:mb-32 overflow-y-visible px-4"
+            className="object-cover w-full lg:h-[527px] lg:w-[443px] lg:mb-32 overflow-y-visible px-8"
             src="/images/whatsappChat.png"
             alt=""
             width={322}
