@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import Navigation from "@/sections/Navbar";
 import ScrollContext from "@/components/providers/scrollcontext";
-// import Footer from "@/sections/Footer";
+import Footer from "@/sections/Footer";
 import { Manrope } from "next/font/google";
 
 export const metadata: Metadata = {
@@ -32,7 +32,7 @@ export default function RootLayout({
               <div className="">
                 <Navigation />
                 {children}
-                {/* <Footer /> */}
+                <Footer />
               </div>
             </main>
           </ThemeProvider>

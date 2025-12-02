@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 
-type Step = {
+// Type definitions
+export type Step = {
   number: number;
   text: string;
   link?: string; // optional link in text
 };
 
-type StepCard = {
+export type StepCard = {
   stepNumber: string; // e.g., "Step 1"
   title: string;
   imageSrc: string;
@@ -17,76 +18,66 @@ type StepCard = {
   steps: Step[];
 };
 
-const stepsData: StepCard[] = [
-  {
-    stepNumber: "Step 1",
-    title: "Start a WhatsApp Chat",
-    imageSrc: "/images/step1.png",
-    imageAlt: "Start a WhatsApp Chat with Chainpaye",
-    steps: [
-      {
-        number: 1,
-        text: 'Click <a href="https://wa.me/..." class="text-primary underline font-medium">here</a> to get directed to our WhatsApp AI agent.',
-        link: "https://wa.me/...",
-      },
-      {
-        number: 2,
-        text: "Our AI Agent greets you instantly - no app download required",
-      },
-      { number: 3, text: "Verify your identity securely inside WhatsApp" },
-    ],
-  },
-  {
-    stepNumber: "Step 2",
-    title: "Add Your Bank or Mobile Money",
-    imageSrc: "/images/step2.png",
-    imageAlt: "Add bank account",
-    steps: [
-      { number: 1, text: "Type 'Add Bank' or select from menu" },
-      { number: 2, text: "Enter your bank or mobile money details" },
-      { number: 3, text: "Get verified in under 60 seconds" },
-    ],
-  },
-  {
-    stepNumber: "Step 3",
-    title: "Start Receiving Payments",
-    imageSrc: "/images/step3.png",
-    imageAlt: "Receive payments globally",
-    steps: [
-      { number: 1, text: "Share your Chainpaye WhatsApp number or link" },
-      { number: 2, text: "Receive money from anyone, anywhere in the world" },
-      { number: 3, text: "Withdraw instantly to your bank or mobile money" },
-    ],
-  },
-];
+export type MultiStepCardsHeader = {
+  title: string; // Main title text
+  highlightedText: string; // Text to be highlighted
+  subtitle: string; // Subtitle/description
+};
 
-// Reusable Numbered Circle Component
-const NumberCircle = ({ number }: { number: number }) => (
-  <div className="flex h-[27px] w-[27px] shrink-0 items-center justify-center rounded-full bg-[#E5EBFB] text-primary text-base font-medium">
-    {number}
-  </div>
-);
+export type MultiStepCardsProps = {
+  stepsData: StepCard[];
+  header?: MultiStepCardsHeader;
+  showHeader?: boolean;
+  animationDuration?: number;
+  cardAnimationDelay?: number;
+};
 
 // Main Multi-Step Cards Component
-const MultiStepCards = () => {
+const MultiStepCards = ({
+  stepsData,
+  header,
+  showHeader = true,
+  animationDuration = 1.3,
+  cardAnimationDelay = 0.3,
+}: MultiStepCardsProps) => {
+  // Reusable Numbered Circle Component
+  const NumberCircle = ({ number }: { number: number }) => (
+    <div className="flex h-[27px] w-[27px] shrink-0 items-center justify-center rounded-full bg-[#E5EBFB] text-primary text-base font-medium">
+      {number}
+    </div>
+  );
+
+  // Default header configuration
+  const defaultHeader: MultiStepCardsHeader = {
+    title: "Get Started with Chainpaye in",
+    highlightedText: "Three Simple Steps",
+    subtitle: "Join Chainpaye in minutes and start receiving payments globally",
+  };
+
+  const headerConfig = header || defaultHeader;
+
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8 }}
-        className="text-center items-center mt-4 p-6 text-2xl flex flex-col justify-center"
-      >
-        <h1 className="mb-4 text-[38px] leading-[42px] font-medium text-[#5a5f73] dark:text-[#bdbfc7] tracking-tight min-w-[378px] lg:w-[569px] lg:text-[40px] lg:leading-[48px]">
-          Get Started with Chainpaye in{" "}
-          <span className="text-black dark:text-white">Three Simple Steps</span>
-        </h1>
-        <p className="text-lg leading-[26px] font-medium font text-secondary text-center px-2">
-          Join Chainpaye in minutes and start receiving payments globally
-        </p>
-      </motion.div>
-      <section className=" px-4 max-w-7xl mx-auto overflow-x-hidden">
+      {showHeader && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
+          className="text-center items-center mt-4 p-6 text-2xl flex flex-col justify-center"
+        >
+          <h1 className="mb-4 text-[38px] leading-[42px] font-medium text-[#5a5f73] dark:text-[#bdbfc7] tracking-tight min-w-[378px] lg:w-[569px] lg:text-[40px] lg:leading-12">
+            {headerConfig.title}{" "}
+            <span className="text-black dark:text-white">
+              {headerConfig.highlightedText}
+            </span>
+          </h1>
+          <p className="text-lg leading-[26px] font-medium font text-secondary text-center px-2">
+            {headerConfig.subtitle}
+          </p>
+        </motion.div>
+      )}
+      <section className="px-4 max-w-7xl mx-auto overflow-x-hidden">
         {stepsData.map((card, index) => (
           <div
             key={index}
@@ -102,10 +93,10 @@ const MultiStepCards = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{
-                duration: 1.3,
-                delay: index * 0.3,
+                duration: animationDuration,
+                delay: index * cardAnimationDelay,
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="w-full md:w-1/2 p-4 md:p-0"
@@ -124,15 +115,18 @@ const MultiStepCards = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.3 }}
-              transition={{ duration: 1.3, delay: index * 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                duration: animationDuration,
+                delay: index * (cardAnimationDelay - 0.1),
+              }}
               className="flex flex-col justify-center p-8 lg:p-12 lg:pl-20 w-full md:w-1/2 gap-8"
             >
               <div>
                 <h3 className="text-primary text-base font-medium mb-2">
                   {card.stepNumber}
                 </h3>
-                <h2 className="text-2xl lg:text-[32px] lg:leading-[32px] font-medium text-foreground tracking-normal">
+                <h2 className="text-2xl lg:text-[32px] lg:leading-8 font-medium text-foreground tracking-normal">
                   {card.title}
                 </h2>
               </div>

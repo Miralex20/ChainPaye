@@ -9,7 +9,7 @@ const Cards = () => {
           initial={{ opacity: 0, x: -100, scale: 0.9 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           viewport={{
-            once: false,
+            once: true,
             amount: "some",
             margin: "-100px 0px -100px 0px",
           }}
@@ -31,7 +31,7 @@ const Cards = () => {
           initial={{ opacity: 0, x: 100, scale: 0.9 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           viewport={{
-            once: false,
+            once: true,
             margin: "-100px 0px -100px 0px",
           }}
           transition={{

@@ -1,10 +1,9 @@
 "use client";
 import Hero from "@/sections/Hero";
 import Cards from "@/components/Cards";
-import MultiStepCards from "@/sections/MultiStepCard";
+import StepsCard from "@/sections/StepsCard";
 import { CardCarousel } from "@/sections/FeatureCards";
 import Hero2 from "@/sections/Hero2";
-import Footer from "@/sections/Footer";
 import ApiSection from "@/sections/ApiSection";
 export default function Home() {
   return (
@@ -18,12 +17,9 @@ export default function Home() {
       <div className="">
         <Cards />
       </div>
-      <MultiStepCards />
+      <StepsCard />
       <CardCarousel />
       <ApiSection />
-      <div className="w-full">
-        <Footer />
-      </div>
     </div>
   );
 }

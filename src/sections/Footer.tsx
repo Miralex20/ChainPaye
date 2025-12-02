@@ -8,7 +8,7 @@ export default function Footer() {
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeInOut", delayChildren: 0.2 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       className={`relative bg-linear-to-t from-[#ccd9f8] lg:py-20 to-[#efeff1] dark:from-[#0b1837] dark:to-[#202024] overflow-hidden animate-gradient text-foreground`}
     >
       {/* Main Content */}

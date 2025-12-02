@@ -89,7 +89,7 @@ function Navigation() {
   const navItems = [
     {
       name: "For Businesses",
-      link: "/",
+      link: "/business",
     },
     {
       name: "Use cases",
