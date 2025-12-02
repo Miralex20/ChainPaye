@@ -14,23 +14,23 @@ export default function Footer() {
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 lg:ml-64">
         {/* Top Section */}
-        <div className="grid md:grid-cols-2 gap-12 lg:h-[230px] lg:w-[1279px] ">
+        <div className="grid md:grid-cols-2 lg:h-[230px] lg:w-[1279px] ">
           {/* Left - Heading */}
-          <div className="w-[382px] h-[144px] lg:w-[578px] lg:h-[96px] ">
-            <h2 className=" font-medium text-[40px] leading-[42px] lg:leading-[48px] lg:tracking-tight">
+          <div className=" h-[144px] lg:w-[578px] lg:h-[96px] text-foreground ">
+            <h2 className=" font-medium text-[32px] leading-[40px] lg:leading-[48px] lg:tracking-tight">
               Unlock Borderless Payments With Chainpaye
             </h2>
           </div>
 
           {/* Right - Description and CTA */}
-          <div className="flex flex-col justify-center w-[382px] h-[202px] pb-20">
-            <p className="mb-6 font-medium text-18px leading-[26px] text-secondary tracking-normal lg:w-[591px]">
+          <div className="flex flex-col justify-center w-[382px]  h-[202px] pb-10 pr-10 lg:pr-0 lg:pb-0">
+            <p className="mb-6 font-medium text-18px leading-[26px] text-secondary lg:w-[591px]">
               Add seamless global and on-chain payments to your business with
               one lightweight integration — we handle compliance, settlement,
               liquidity, and infrastructure so you can focus on growth.
             </p>
             <div>
-              <button className="bg-primary text-foreground px-6 py-3 rounded-md inline-flex items-center gap-2 transition-colors">
+              <button className="bg-primary text-white dark:text-black px-6 py-3 rounded-md inline-flex items-center gap-2 transition-colors hover:bg-primary/80">
                 Get in touch with us
                 <ArrowRight size={18} />
               </button>
@@ -104,9 +104,9 @@ export default function Footer() {
       </div>
 
       {/* Background Large Text */}
-      <div className="absolute bottom-25 lg:top-25 lg:left-6 flex items-center justify-center overflow-hidden pointer-events-none">
+      <div className="absolute bottom-25 left-3 lg:top-25 lg:left-6 flex items-center justify-center overflow-hidden pointer-events-none">
         <div
-          className={`text-[6rem] text-[#bccfff] dark:text-[#16245b] md:text-[16rem] font-extrabold lg:text-[20rem]  select-none opacity-30`}
+          className={`text-[4rem] text-[#bccfff] dark:text-[#16245b] md:text-[16rem] font-extrabold lg:text-[20rem]  select-none opacity-30`}
         >
           CHAINPAYE
         </div>

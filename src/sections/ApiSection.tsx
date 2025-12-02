@@ -6,9 +6,9 @@ export default function ApiSection() {
     <div className=" bg-[#E8E9F8] dark:bg-[#2a2a33] transition-colors duration-300 overflow-x-hidden rounded-3xl">
       {/* Main content */}
       <div className="container mx-auto px-6 py-12 md:py-16">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-start">
+        <div className="grid lg:grid-cols-2 gap-4 md:gap-12 lg:gap-20 items-start">
           {/* Left column - Content */}
-          <div className="space-y-6 px-6 md:space-y-8">
+          <div className="space-y-6 px-6 md:space-y-8 mx-auto">
             <h1 className="font-medium text-foreground w-[331px] max-w-md text-[38px] leading-[42px] tracking-tight lg:w-[612px] lg:text-[40px] lg:leading-[48px]">
               Get ready to scale with our payment APIs
             </h1>

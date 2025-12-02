@@ -90,12 +90,12 @@ export function CardCarousel() {
           {cards.map((card, index) => (
             <motion.div
               key={index}
-              className="shrink-0 w-[85%] "
+              className="shrink-0 w-[100%] "
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
             >
-              <div className="bg-card rounded-3xl shadow-xl p-6 h-full">
+              <div className="bg-card rounded-3xl shadow-xl p-6 h-[95%]">
                 <h2 className="text-gray-900 font-bold dark:text-white mb-4">
                   {card.title}
                 </h2>

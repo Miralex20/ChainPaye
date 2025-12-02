@@ -78,11 +78,11 @@ const MultiStepCards = () => {
         transition={{ duration: 0.8 }}
         className="text-center items-center mt-4 p-6 text-2xl flex flex-col justify-center"
       >
-        <h1 className="mb-4 text-[38px] leading-[42px] font-medium text-[#5a5f73] dark:text-[#bdbfc7] tracking-tight w-[398px] lg:w-[569px] lg:text-[40px] lg:leading-[48px]">
+        <h1 className="mb-4 text-[38px] leading-[42px] font-medium text-[#5a5f73] dark:text-[#bdbfc7] tracking-tight min-w-[378px] lg:w-[569px] lg:text-[40px] lg:leading-[48px]">
           Get Started with Chainpaye in{" "}
           <span className="text-black dark:text-white">Three Simple Steps</span>
         </h1>
-        <p className="text-lg leading-[26px] font-medium font text-secondary">
+        <p className="text-lg leading-[26px] font-medium font text-secondary text-center px-2">
           Join Chainpaye in minutes and start receiving payments globally
         </p>
       </motion.div>
