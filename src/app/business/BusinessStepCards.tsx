@@ -66,7 +66,7 @@ const StepsCard = () => {
   };
 
   return (
-    <div>
+    <div id="how-it-works">
       <MultiStepCards stepsData={stepsData} header={header} />
     </div>
   );

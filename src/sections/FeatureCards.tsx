@@ -71,7 +71,10 @@ export function CardCarousel() {
   const getNextIndex = () => (currentIndex + 1) % cards.length;
 
   return (
-    <div className="w-full flex flex-col items-center justify-center py-16">
+    <div
+      id="use-cases"
+      className="w-full flex flex-col items-center justify-center py-16"
+    >
       <div className="w-[417px] h-[20px] mb-16 gap-4 flex flex-col items-center justify-center lg:w-[569px] lg:h-[26px]">
         <h1 className="font-medium tracking-tight text-[27.83px] text-[#111528] leading-[30.78px] lg:text-[40px] lg:leading-[48px]">
           Real world application{" "}
@@ -90,15 +93,13 @@ export function CardCarousel() {
           {cards.map((card, index) => (
             <motion.div
               key={index}
-              className="shrink-0 w-[100%] "
+              className="shrink-0 w-full"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
             >
               <div className="bg-card rounded-3xl shadow-xl p-6 h-[95%]">
-                <h2 className="text-gray-900 font-bold mb-4">
-                  {card.title}
-                </h2>
+                <h2 className="text-gray-900 font-bold mb-4">{card.title}</h2>
                 <p className="text-gray-600 leading-relaxed whitespace-pre-line">
                   {card.content}
                 </p>

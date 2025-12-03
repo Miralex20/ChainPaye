@@ -15,77 +15,81 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
-function ThemeToggle() {
-  const [mounted, setMounted] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
+// function ThemeToggle() {
+//   const [mounted, setMounted] = useState(false);
+//   const { resolvedTheme, setTheme } = useTheme();
 
-  useEffect(
-    () => setMounted(true),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
-  );
+//   useEffect(
+//     () => setMounted(true),
+//     // eslint-disable-next-line react-hooks/exhaustive-deps
+//     []
+//   );
 
-  const isDark = resolvedTheme === "light";
+//   const isDark = resolvedTheme === "light";
 
-  if (!mounted)
-    return <div className="h-8 w-14 rounded-full bg-gray-200 animate-pulse" />;
+//   if (!mounted)
+//     return <div className="h-8 w-14 rounded-full bg-gray-200 animate-pulse" />;
 
-  return (
-    <button
-      type="button"
-      aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
-      onClick={() => setTheme(isDark ? "light" : "dark")}
-      className={cn(
-        "relative inline-flex h-8 w-14 items-center rounded-full transition-all",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2",
-        "duration-500 ease-out", // ← critical: same duration everywhere
-        isDark ? "bg-zinc-600/80" : "bg-gray-200/80"
-      )}
-    >
-      {/* ON-state glow (light mode only) – perfectly synced */}
-      <span
-        className={cn(
-          "pointer-events-none absolute inset-0 rounded-full bg-sky-400/50 blur-xl transition-opacity duration-500",
-          isDark ? "opacity-0" : "opacity-100"
-        )}
-      />
+//   return (
+//     <button
+//       type="button"
+//       aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
+//       onClick={() => setTheme(isDark ? "light" : "dark")}
+//       className={cn(
+//         "relative inline-flex h-8 w-14 items-center rounded-full transition-all",
+//         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2",
+//         "duration-500 ease-out", // ← critical: same duration everywhere
+//         isDark ? "bg-zinc-600/80" : "bg-gray-200/80"
+//       )}
+//     >
+//       {/* ON-state glow (light mode only) – perfectly synced */}
+//       <span
+//         className={cn(
+//           "pointer-events-none absolute inset-0 rounded-full bg-sky-400/50 blur-xl transition-opacity duration-500",
+//           isDark ? "opacity-0" : "opacity-100"
+//         )}
+//       />
 
-      {/* Sliding knob – the star of the show */}
-      <span
-        className={cn(
-          "pointer-events-none relative z-10 flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-lg transition-all duration-500 ease-out",
-          "ring-1 ring-black/5",
-          isDark
-            ? "translate-x-7 translate-y-0.5 scale-95 shadow-md"
-            : "translate-x-1 translate-y-0 scale-100 shadow-xl"
-        )}
-      >
-        {/* Sun – fades & rotates in/out */}
-        <Sun
-          className={cn(
-            "h-4.5 w-4.5 text-yellow-500 transition-all duration-500 ease-out",
-            isDark
-              ? "opacity-0 rotate-180 scale-0"
-              : "opacity-100 rotate-0 scale-100"
-          )}
-        />
+//       {/* Sliding knob – the star of the show */}
+//       <span
+//         className={cn(
+//           "pointer-events-none relative z-10 flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-lg transition-all duration-500 ease-out",
+//           "ring-1 ring-black/5",
+//           isDark
+//             ? "translate-x-7 translate-y-0.5 scale-95 shadow-md"
+//             : "translate-x-1 translate-y-0 scale-100 shadow-xl"
+//         )}
+//       >
+//         {/* Sun – fades & rotates in/out */}
+//         <Sun
+//           className={cn(
+//             "h-4.5 w-4.5 text-yellow-500 transition-all duration-500 ease-out",
+//             isDark
+//               ? "opacity-0 rotate-180 scale-0"
+//               : "opacity-100 rotate-0 scale-100"
+//           )}
+//         />
 
-        {/* Moon – opposite animation */}
-        <Moon
-          className={cn(
-            "absolute h-4.5 w-4.5 text-gray-800 transition-all duration-500 ease-out",
-            isDark
-              ? "opacity-100 rotate-0 scale-100"
-              : "opacity-0 -rotate-180 scale-0"
-          )}
-        />
-      </span>
-    </button>
-  );
-}
+//         {/* Moon – opposite animation */}
+//         <Moon
+//           className={cn(
+//             "absolute h-4.5 w-4.5 text-gray-800 transition-all duration-500 ease-out",
+//             isDark
+//               ? "opacity-100 rotate-0 scale-100"
+//               : "opacity-0 -rotate-180 scale-0"
+//           )}
+//         />
+//       </span>
+//     </button>
+//   );
+// }
 
 function Navigation() {
+  const pathname = usePathname();
+  const isBusinessPage = pathname?.startsWith("/business");
+
   const navItems = [
     {
       name: "For Businesses",
@@ -93,11 +97,11 @@ function Navigation() {
     },
     {
       name: "Use cases",
-      link: "/",
+      link: isBusinessPage ? "/business#platform-cards" : "/#use-cases",
     },
     {
       name: "About",
-      link: "/",
+      link: isBusinessPage ? "/business#how-it-works" : "/#how-it-works",
     },
   ];
 

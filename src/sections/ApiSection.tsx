@@ -1,9 +1,16 @@
 import { Settings, Braces, Clock, ArrowRight } from "lucide-react";
 import { CodeSnippet } from "@/components/CodeSnipppet";
+import { motion } from "motion/react";
 
 export default function ApiSection() {
   return (
-    <div className=" bg-[#E8E9F8] transition-colors duration-300 overflow-x-hidden rounded-3xl">
+    <motion.div
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeInOut", delayChildren: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
+      className=" bg-[#E8E9F8] transition-colors duration-300 overflow-x-hidden rounded-3xl"
+    >
       {/* Main content */}
       <div className="container mx-auto px-6 py-12 md:py-16">
         <div className="grid lg:grid-cols-2 gap-4 md:gap-12 lg:gap-20 items-start">
@@ -52,6 +59,6 @@ export default function ApiSection() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

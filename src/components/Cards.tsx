@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 const Cards = () => {
   return (
-    <div className=" w-7xl lg:h-[524px] lg:w-[1252px] items-center bg-primary-container pt-8 lg:pl-32 lg:rounded-3xl md:flex-row shadow-xs flex flex-col">
+    <div className=" max-w-7xl lg:h-[524px] lg:w-[1252px] items-center bg-primary-container pt-8 lg:pl-32 lg:rounded-3xl md:flex-row shadow-xs flex flex-col">
       <div className="flex flex-col-reverse gap-[24px] lg:flex-row lg:gap-[24px] justify-center items-center">
         <motion.div
           initial={{ opacity: 0, x: -100, scale: 0.9 }}
@@ -50,8 +50,15 @@ const Cards = () => {
             chat.
           </p>
           <div>
-            <button className="ml-2 w-60 transform rounded-lg bg-primary px-12 py-4 shadow-2xl font-medium  transition-all duration-300 hover:-translate-y-0.5 mt-6 text-primary-foreground mb-8 cursor-pointer">
-              Start on WhatsApp
+            <button className="w-[221px] h-[48px] transform rounded-lg bg-primary px-4 py-4 font-medium text-primary-foreground flex gap-4 items-center hover:bg-primary/80 transition-all duration-300 my-(--spacing-lg) mt-4">
+              <Image
+                src="icons/whatsapp.svg"
+                alt="whatsapp icon"
+                width={24}
+                height={24}
+                className="text-primary-foreground"
+              />
+              <p>Start on WhatsApp</p>
             </button>
           </div>
         </motion.div>

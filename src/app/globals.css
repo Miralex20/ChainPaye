@@ -235,6 +235,7 @@
   /* Smooth theme transitions for common elements */
   html {
     transition: background-color 300ms ease-in-out;
+    scroll-behavior: smooth;
   }
 
   /* Ensure smooth transitions for all themed elements */

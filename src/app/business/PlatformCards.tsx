@@ -132,12 +132,15 @@ export function PlatformCards() {
         }
       `}</style>
 
-      <div className="max-w-7xl mx-auto px-6 py-16 lg:py-24">
+      <div
+        id="platform-cards"
+        className="max-w-7xl mx-auto px-6 py-16 lg:py-24"
+      >
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left side - Hero content */}
           <div className="lg:sticky lg:top-24 font-medium px-8">
             <h1 className="text-[38px] leading-[42px] tracking-tight mb-8">
-              Built for the Platforms Powering Africa's Digital Economy
+              Built for the Platforms Powering Africa&apos;s Digital Economy
             </h1>
 
             <p className="mb-8 text-[18px] leading-7 ">
@@ -165,7 +168,11 @@ export function PlatformCards() {
           </div>
 
           {/* Right side - Scrolling cards */}
-          <div className="space-y-6 overflow-hidden  lg:grid lg:grid-cols-2 lg:gap-6 lg:h-[600px] lg:space-y-0 ">
+          <div className="relative space-y-6 overflow-hidden lg:grid lg:grid-cols-2 lg:gap-6 lg:h-[600px] lg:space-y-0">
+            {/* Gradient Masks */}
+            <div className="absolute top-0 left-0 right-0 h-20 bg-linear-to-b from-[#efeff1] to-transparent z-10 pointer-events-none hidden lg:block" />
+            <div className="absolute bottom-0 left-0 right-0 h-20 bg-linear-to-t from-[#efeff1] to-transparent z-10 pointer-events-none hidden lg:block" />
+
             {/* First column - scrolling up */}
             <div className="relative overflow-hidden ">
               <div className="flex lg:flex-col animate-scroll-up">
