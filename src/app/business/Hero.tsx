@@ -1,5 +1,6 @@
-import { ArrowRight } from "lucide-react";
+import { PhoneCallIcon } from "lucide-react";
 import { CodeSnippet } from "@/components/CodeSnipppet";
+import CalendlyButton from "@/components/CalendlyButton";
 
 export default function HeroSection() {
   return (
@@ -24,10 +25,17 @@ export default function HeroSection() {
             </div>
 
             {/* CTA Button */}
-            <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 rounded-lg font-medium transition-colors shadow-sm">
-              Get Started
-              <ArrowRight className="w-4 h-4" />
-            </button>
+            {/* <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 rounded-lg font-medium transition-colors shadow-sm">
+              <PhoneCallIcon className="w-4 h-4" />
+              Book a call
+            </button> */}
+            <CalendlyButton
+              calendlyUrl="https://calendly.com/cryptalksfinancials/30min"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 rounded-lg font-medium transition-colors shadow-sm cursor-pointer hover:bg-primary/90 duration-300"
+            >
+              <PhoneCallIcon className="w-4 h-4" />
+              Book A Call
+            </CalendlyButton>
           </div>
 
           {/* Right column - Code snippet */}

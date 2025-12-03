@@ -1,5 +1,6 @@
-import { Phone, ArrowRight } from "lucide-react";
+import { PhoneCallIcon, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import CalendlyButton from "@/components/CalendlyButton";
 
 const platforms = [
   {
@@ -145,15 +146,21 @@ export function PlatformCards() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
-                <Phone className="w-5 h-5" />
-                Book a call
-              </button>
+              <CalendlyButton
+                calendlyUrl="https://calendly.com/cryptalksfinancials/30min"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 rounded-lg font-medium transition-colors shadow-sm cursor-pointer hover:bg-primary/90 duration-300"
+              >
+                <PhoneCallIcon className="w-4 h-4" />
+                Book A Call
+              </CalendlyButton>
 
-              <button className="text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors flex items-center gap-2">
+              <CalendlyButton
+                calendlyUrl="https://calendly.com/cryptalksfinancials/30min"
+                className="text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors flex items-center gap-2"
+              >
                 Request a Demo
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </CalendlyButton>
             </div>
           </div>
 
