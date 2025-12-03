@@ -23,8 +23,10 @@ export default function ScrollContext({
     const scroller = new Lenis({
       lerp: 0.06,
       wheelMultiplier: 1.2,
-      syncTouch: true,
-      syncTouchLerp: 0.06,
+      touchMultiplier: 0,
+      syncTouch: false,
+      syncTouchLerp: 0,
+
       overscroll: true,
       smoothWheel: true,
       duration: 1.5,
