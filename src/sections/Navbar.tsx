@@ -26,7 +26,7 @@ function ThemeToggle() {
     []
   );
 
-  const isDark = resolvedTheme === "dark";
+  const isDark = resolvedTheme === "light";
 
   if (!mounted)
     return <div className="h-8 w-14 rounded-full bg-gray-200 animate-pulse" />;
@@ -74,7 +74,7 @@ function ThemeToggle() {
         {/* Moon – opposite animation */}
         <Moon
           className={cn(
-            "absolute h-4 w-4 text-gray-800 transition-all duration-500 ease-out",
+            "absolute h-4.5 w-4.5 text-gray-800 transition-all duration-500 ease-out",
             isDark
               ? "opacity-100 rotate-0 scale-100"
               : "opacity-0 -rotate-180 scale-0"
@@ -111,7 +111,7 @@ function Navigation() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             <NavbarButton className="bg-primary text-primary-foreground flex gap-4 items-center justify-center mr-6">
               <Image
                 src="icons/whatsapp.svg"
@@ -131,7 +131,7 @@ function Navigation() {
             <NavbarLogo />
 
             <div className="flex items-center space-x-4 mr-8">
-              <ThemeToggle />
+              {/* <ThemeToggle /> */}
               <MobileNavToggle
                 isOpen={isMobileMenuOpen}
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

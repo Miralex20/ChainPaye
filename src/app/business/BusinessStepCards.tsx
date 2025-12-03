@@ -5,49 +5,69 @@ const StepsCard = () => {
   const stepsData: StepCard[] = [
     {
       stepNumber: "Step 1",
-      title: "Start a WhatsApp Chat",
-      imageSrc: "/images/step1.png",
-      imageAlt: "Start a WhatsApp Chat with Chainpaye",
+      title: "Talk to our team",
+      imageSrc: "/images/step4.png",
+      imageAlt: "Talk to our team for clarity",
       steps: [
         {
           number: 1,
-          text: 'Click <a href="https://wa.me/..." class="text-primary underline font-medium">here</a> to get directed to our WhatsApp AI agent.',
+          text: 'Click <a href="https://wa.me/..." class="text-primary underline font-medium">here</a> to book a call with our team.',
           link: "https://wa.me/...",
         },
         {
           number: 2,
-          text: "Our AI Agent greets you instantly - no app download required",
+          text: "We’ll understand your business needs and help you choose the best way to accept payments.",
         },
-        { number: 3, text: "Verify your identity securely inside WhatsApp" },
+        {
+          number: 3,
+          text: "After the call, we’ll generate your API credentials for you automatically.",
+        },
       ],
     },
     {
       stepNumber: "Step 2",
-      title: "Add Your Bank or Mobile Money",
-      imageSrc: "/images/step2.png",
+      title: "2. Integrate the API (done by you or your developer)",
+      imageSrc: "/images/step5.png",
       imageAlt: "Add bank account",
       steps: [
-        { number: 1, text: "Type 'Add Bank' or select from menu" },
-        { number: 2, text: "Enter your bank or mobile money details" },
-        { number: 3, text: "Get verified in under 60 seconds" },
+        {
+          number: 1,
+          text: "Your developer can plug ChainPay into your website, platform, or mobile app using our simple guide.",
+        },
+        {
+          number: 2,
+          text: "If you don’t have a developer, we’ll recommend one you can trust.",
+        },
+        { number: 3, text: "Get started in matter of minutes" },
       ],
     },
     {
       stepNumber: "Step 3",
-      title: "Start Receiving Payments",
+      title: "Start receiving payments globally",
       imageSrc: "/images/step3.png",
       imageAlt: "Receive payments globally",
       steps: [
-        { number: 1, text: "Share your Chainpaye WhatsApp number or link" },
-        { number: 2, text: "Receive money from anyone, anywhere in the world" },
-        { number: 3, text: "Withdraw instantly to your bank or mobile money" },
+        {
+          number: 1,
+          text: "Once your API is connected, Customers can pay you from anywhere",
+        },
+        {
+          number: 2,
+          text: "You get settled instantly in NGN, GHS, KES, ZAR, or USD",
+        },
+        { number: 3, text: "Every payment is secured and verified" },
       ],
     },
   ];
 
+  const header = {
+    title: "How It Works",
+    subtitle: "Join Chainpaye in minutes and start receiving payments globally",
+  };
+
   return (
     <div>
-      <MultiStepCards stepsData={stepsData} />
+      <MultiStepCards stepsData={stepsData} header={header} />
     </div>
   );
 };

@@ -20,7 +20,7 @@ export type StepCard = {
 
 export type MultiStepCardsHeader = {
   title: string; // Main title text
-  highlightedText: string; // Text to be highlighted
+  highlightedText?: string; // Text to be highlighted
   subtitle: string; // Subtitle/description
 };
 
@@ -64,7 +64,7 @@ const MultiStepCards = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
-          className="text-center items-center mt-4 p-6 text-2xl flex flex-col justify-center"
+          className="text-center items-center mt-4 p-8 text-2xl flex flex-col justify-center"
         >
           <h1 className="mb-4 text-[38px] leading-[42px] font-medium text-[#5a5f73] dark:text-[#bdbfc7] tracking-tight min-w-[378px] lg:w-[569px] lg:text-[40px] lg:leading-12">
             {headerConfig.title}{" "}
@@ -77,7 +77,7 @@ const MultiStepCards = ({
           </p>
         </motion.div>
       )}
-      <section className="px-4 max-w-7xl mx-auto overflow-x-hidden">
+      <section className="px-4 w-[398px] lg:w-[1280px] mx-auto overflow-x-hidden">
         {stepsData.map((card, index) => (
           <div
             key={index}

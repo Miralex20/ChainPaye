@@ -1,5 +1,6 @@
 "use client";
-import Hero from "../business/Hero";
+import HeroSection from "../business/Hero";
+import BusinessStepCards from "./BusinessStepCards";
 // import Cards from "@/components/Cards";
 // // import MultiStepCards from "@/sections/MultiStepCard";
 // import StepsCard from "@/sections/StepsCard";
@@ -11,7 +12,9 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center w-full overflow-x-hidden mx-auto">
       <div className="">
-        <Hero />
+        <HeroSection />
+        <div></div>
+        <BusinessStepCards />
       </div>
     </div>
   );
