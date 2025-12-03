@@ -73,10 +73,10 @@ export function CardCarousel() {
   return (
     <div className="w-full flex flex-col items-center justify-center py-16">
       <div className="w-[417px] h-[20px] mb-16 gap-4 flex flex-col items-center justify-center lg:w-[569px] lg:h-[26px]">
-        <h1 className="font-medium tracking-tight text-[27.83px] text-[#111528] leading-[30.78px] dark:text-white lg:text-[40px] lg:leading-[48px]">
+        <h1 className="font-medium tracking-tight text-[27.83px] text-[#111528] leading-[30.78px] lg:text-[40px] lg:leading-[48px]">
           Real world application{" "}
         </h1>
-        <p className="text-[13.18px] font-medium leading-[19.04px] text-secondary dark:text-(--text-tertiary) lg:text-[18px] lg:leading-[26px]">
+        <p className="text-[13.18px] font-medium leading-[19.04px] text-secondary lg:text-[18px] lg:leading-[26px]">
           Discover how people and businesses use Chainpaye
         </p>
       </div>
@@ -96,10 +96,10 @@ export function CardCarousel() {
               transition={{ delay: index * 0.1 }}
             >
               <div className="bg-card rounded-3xl shadow-xl p-6 h-[95%]">
-                <h2 className="text-gray-900 font-bold dark:text-white mb-4">
+                <h2 className="text-gray-900 font-bold mb-4">
                   {card.title}
                 </h2>
-                <p className="text-gray-600 dark:text-white leading-relaxed whitespace-pre-line">
+                <p className="text-gray-600 leading-relaxed whitespace-pre-line">
                   {card.content}
                 </p>
               </div>
@@ -124,10 +124,10 @@ export function CardCarousel() {
             style={{ transformStyle: "preserve-3d" }}
           >
             <div className="bg-card rounded-3xl shadow-xl p-8">
-              <h2 className="text-gray-900 font-bold dark:text-white mb-4">
+              <h2 className="text-gray-900 font-bold mb-4">
                 {cards[getPrevIndex()].title}
               </h2>
-              <p className="text-gray-600 dark:text-white text-sm leading-relaxed whitespace-pre-line line-clamp-6">
+              <p className="text-gray-600 text-sm leading-relaxed whitespace-pre-line line-clamp-6">
                 {cards[getPrevIndex()].content}
               </p>
             </div>
@@ -162,7 +162,7 @@ export function CardCarousel() {
                 className="w-full font-medium"
               >
                 <div className="bg-card rounded-3xl shadow-2xl p-10 cursor-grab active:cursor-grabbing">
-                  <h2 className="text-gray-900 font-bold dark:text-white mb-6 lg:text-[18px] lg:leading-[26px]">
+                  <h2 className="text-gray-900 font-bold mb-6 lg:text-[18px] lg:leading-[26px]">
                     {cards[currentIndex].title}
                   </h2>
                   <p className="text-secondary leading-relaxed whitespace-pre-line lg:text-[18px] lg:leading-[30px]">

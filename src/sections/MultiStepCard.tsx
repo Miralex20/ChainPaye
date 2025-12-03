@@ -66,9 +66,9 @@ const MultiStepCards = ({
           transition={{ duration: 0.8 }}
           className="text-center items-center mt-4 p-8 text-2xl flex flex-col justify-center"
         >
-          <h1 className="mb-4 text-[38px] leading-[42px] font-medium text-[#5a5f73] dark:text-[#bdbfc7] tracking-tight min-w-[378px] lg:w-[569px] lg:text-[40px] lg:leading-12">
+          <h1 className="mb-4 text-[38px] leading-[42px] font-medium text-[#5a5f73] tracking-tight min-w-[378px] lg:w-[569px] lg:text-[40px] lg:leading-12">
             {headerConfig.title}{" "}
-            <span className="text-black dark:text-white">
+            <span className="text-black">
               {headerConfig.highlightedText}
             </span>
           </h1>
@@ -136,7 +136,7 @@ const MultiStepCards = ({
                   <div key={step.number} className="flex gap-4 items-start">
                     <NumberCircle number={step.number} />
                     <p
-                      className="text-tertiary dark:text-(--text-tertiary ) text-base lg:text-base leading-relaxed lg:pr-10 font-medium"
+                      className="text-tertiary ) text-base lg:text-base leading-relaxed lg:pr-10 font-medium"
                       dangerouslySetInnerHTML={{
                         __html:
                           step.link && step.text.includes("here")

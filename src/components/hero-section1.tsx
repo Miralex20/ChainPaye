@@ -26,7 +26,7 @@ export default function HeroSectionOne() {
           Money{" "}
           <FlipWords
             duration={3000}
-            className="text-[#003dff] dark:text-[#003dff]"
+            className="text-[#003dff]"
             words={words}
           />{" "}
           As Simple As A Chat
@@ -43,7 +43,7 @@ export default function HeroSectionOne() {
             delay: 3,
             ease: "easeInOut",
           }}
-          className="relative z-10 w-[403px] h-[56px] text-center text-xl leading-[28px] font-medium text-(--text-secondary) dark:text-[#bdbfc7] mb-16 lg:w-[616px] lg:h-[28px]"
+          className="relative z-10 w-[403px] h-[56px] text-center text-xl leading-[28px] font-medium text-(--text-secondary) mb-16 lg:w-[616px] lg:h-[28px]"
         >
           Send and receive money worldwide - instantly on WhatsApp
         </motion.p>

@@ -9,7 +9,7 @@ export default function Footer() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeInOut", delayChildren: 0.2 }}
       viewport={{ once: true, amount: 0.2 }}
-      className={`relative bg-linear-to-t from-[#ccd9f8] lg:py-20 to-[#efeff1] dark:from-[#0b1837] dark:to-[#202024] overflow-hidden animate-gradient text-foreground`}
+      className={`relative bg-linear-to-t from-[#ccd9f8] lg:py-20 to-[#efeff1] overflow-hidden animate-gradient text-foreground`}
     >
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 lg:ml-64">
@@ -30,7 +30,7 @@ export default function Footer() {
               liquidity, and infrastructure so you can focus on growth.
             </p>
             <div>
-              <button className="bg-primary text-white dark:text-black px-6 py-3 rounded-md inline-flex items-center gap-2 transition-colors hover:bg-primary/80">
+              <button className="bg-primary text-white px-6 py-3 rounded-md inline-flex items-center gap-2 transition-colors hover:bg-primary/80">
                 Get in touch with us
                 <ArrowRight size={18} />
               </button>
@@ -106,7 +106,7 @@ export default function Footer() {
       {/* Background Large Text */}
       <div className="absolute bottom-25 left-3 lg:top-25 lg:left-6 flex items-center justify-center overflow-hidden pointer-events-none">
         <div
-          className={`text-[4rem] text-[#bccfff] dark:text-[#16245b] md:text-[16rem] font-extrabold lg:text-[20rem]  select-none opacity-30`}
+          className={`text-[4rem] text-[#bccfff] md:text-[16rem] font-extrabold lg:text-[20rem]  select-none opacity-30`}
         >
           CHAINPAYE
         </div>
