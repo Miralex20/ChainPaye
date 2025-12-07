@@ -47,7 +47,7 @@ export default function ApiSection() {
             </div>
 
             {/* CTA Button */}
-            <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 rounded-lg font-medium transition-colors shadow-sm">
+            <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 rounded-lg font-medium transition-colors shadow-sm hover:bg-primary/80 cursor-pointer">
               Get Started
               <ArrowRight className="w-4 h-4" />
             </button>

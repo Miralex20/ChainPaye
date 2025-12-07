@@ -56,7 +56,7 @@ const Cards = () => {
                 alt="whatsapp icon"
                 width={24}
                 height={24}
-                className="text-primary-foreground"
+                className="text-primary-foreground cursor-pointer hover:text-primary-foreground/80 transition-all duration-300"
               />
               <p>Start on WhatsApp</p>
             </button>

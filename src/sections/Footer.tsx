@@ -210,7 +210,7 @@ export default function Footer() {
 
       {/* Background Large Text */}
       <div className="absolute bottom-25 left-3 lg:top-25 lg:left-6 flex items-center justify-center overflow-hidden pointer-events-none">
-        <div className="text-[4rem] text-[#bccfff] md:text-[16rem] font-extrabold lg:text-[20rem] select-none opacity-30 tracking-[1.92px] lg:tracking-[2.3px]">
+        <div className="text-[4rem] text-[#bccfff] md:text-[16rem] font-extrabold lg:text-[330px] select-none opacity-30 tracking-[1.92px] lg:tracking-[1%] lg:leading-[100%]">
           CHAINPAYE
         </div>
       </div>
