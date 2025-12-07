@@ -7,9 +7,49 @@ import Footer from "@/sections/Footer";
 import { Manrope } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "ChainPaye - Global Money Transfers Made Easy",
+  metadataBase: new URL("https://chainpaye.com"),
+  title: {
+    default: "ChainPaye - Global Money Transfers Made Easy",
+    template: "%s | ChainPaye",
+  },
   description:
-    "A seamless platform to send and receive money worldwide - instantly on WhatsApp.",
+    "A seamless platform to send and receive money worldwide - instantly on WhatsApp. Secure, fast, and easy global payments.",
+  keywords: [
+    "money transfer",
+    "whatsapp banking",
+    "global payments",
+    "send money",
+    "receive money",
+    "fintech",
+    "chainpaye",
+  ],
+  openGraph: {
+    title: "ChainPaye - Global Money Transfers Made Easy",
+    description:
+      "A seamless platform to send and receive money worldwide - instantly on WhatsApp.",
+    url: "https://chainpaye.com",
+    siteName: "ChainPaye",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ChainPaye - Global Money Transfers Made Easy",
+    description:
+      "A seamless platform to send and receive money worldwide - instantly on WhatsApp.",
+    creator: "@chainpaye",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 const manrope = Manrope({
   variable: "--font-manrope",

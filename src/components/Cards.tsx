@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 const Cards = () => {
   return (
-    <div className=" max-w-7xl lg:h-[524px] lg:w-[1252px] items-center bg-primary-container pt-8 lg:pl-32 lg:rounded-3xl md:flex-row shadow-xs flex flex-col">
+    <div className=" w-7xl lg:h-[524px] lg:w-[1252px] items-center bg-primary-container pt-8 lg:pl-32 lg:rounded-3xl md:flex-row shadow-xs flex flex-col">
       <div className="flex flex-col-reverse gap-[24px] lg:flex-row lg:gap-[24px] justify-center items-center">
         <motion.div
           initial={{ opacity: 0, x: -100, scale: 0.9 }}
@@ -20,7 +20,7 @@ const Cards = () => {
           className="w-full"
         >
           <Image
-            className="object-cover w-full lg:h-[527px] lg:w-[443px] lg:mb-32 overflow-y-visible px-8"
+            className="object-cover w-full lg:h-[527px] lg:w-[443px] lg:mb-32 overflow-y-visible px-8 mt-24"
             src="/images/whatsappChat.png"
             alt=""
             width={322}

@@ -206,6 +206,7 @@ export default function Footer() {
           <p>All Rights Reserved.</p>
         </div>
       </div>
+      {/* <Frame1874428457 /> */}
 
       {/* Background Large Text */}
       <div className="absolute bottom-25 left-3 lg:top-25 lg:left-6 flex items-center justify-center overflow-hidden pointer-events-none">
